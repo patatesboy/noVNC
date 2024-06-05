@@ -46,6 +46,15 @@
 
     <script type="module" crossorigin="anonymous" src="app/error-handler.js"></script>
     <script type="module" crossorigin="anonymous" src="app/ui.js"></script>
+
+    <!-- Insert this script just before the closing </head> tag -->
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            // Set the local VNC server details here
+            document.getElementById('noVNC_setting_host').value = '192.168.1.100'; // Change to your local VNC server IP
+            document.getElementById('noVNC_setting_port').value = '5900'; // Change to your VNC server port if different
+        });
+    </script>
 </head>
 
 <body>
